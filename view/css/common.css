@@ -1,0 +1,134 @@
+/* Responsive Layout */
+@media screen and (max-width: 700px) {
+    .navBar {
+        flex-direction: column;
+    }
+}
+
+.picBackground {
+    /* The color of the picture's background: */
+    background-color: rgb(244, 240, 237);
+}
+
+/* Remove Margin */
+.noMargin {
+    margin: 0;
+}
+
+/* Headers */
+.pageHeader {
+    background-color: #600000;
+    text-align: center;
+    color: white;
+    padding: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 4em;
+}
+
+.pageSubHeader {
+    text-align: center;
+    color: #800000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-size: 2.5em;
+}
+
+/* Paragraphs */
+.mainText {
+    color: dimgray;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4em;
+}
+
+.refText {
+    color: dimgray;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+
+.inputBox {
+    font-size: 1.4em;
+}
+
+.formButton {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    margin: 1em 0em 1em 0em;
+}
+
+/* Link Buttons */
+.linkText {
+    color: #A00000;
+    text-decoration: none;
+}
+
+.linkText:hover {
+    color: #FF0000;
+}
+
+.linkText:active {
+    color: #A00000;
+}
+
+/* Navigation Bar */
+.navBar {
+    display: flex;
+    background-color: #252525;
+}
+
+.navItem {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+}
+
+    .navItem:hover {
+        background-color: #DDDDDD;
+        color: black;
+    }
+
+    .navItem:active {
+        background-color: #808080;
+        color: black;
+    }
+
+.curNavItem {
+    background-color: #A00000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+}
+
+    .curNavItem:hover {
+        background-color: #DDDDDD;
+        color: #A00000;
+    }
+
+    .curNavItem:active {
+        background-color: #808080;
+        color: black;
+    }
+
+/* Footer */
+.footBar {
+    background-color: dimgray;
+    text-align: center;
+    padding: 10px;
+}
+
+.footText {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}

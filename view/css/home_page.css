@@ -1,0 +1,27 @@
+﻿@media screen and (max-width: 700px) {
+    .mainContent {
+        flex-direction: column-reverse;
+    }
+}
+
+/* Main Content */
+.mainContent {
+    display: flex;
+}
+
+/* Picture Column */
+.picColumn {
+    flex: 45%;
+    text-align: center;
+}
+
+/* Text Column */
+.textColumn {
+    flex: 55%;
+    padding: 20px;
+    text-align: center;
+}
+
+.greetingsBlock {
+    margin: 100px 0px 100px 0px;
+}

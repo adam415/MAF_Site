@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>MAF - Form</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/form_page.css"/>
+</head>
+<body class="noMargin picBackground">
+    <!-- The Header -->
+    <header>
+        <h1 class="noMargin pageHeader">MAF Form</h1>
+    </header>
+
+    <!-- The Navigation Bar -->
+    <nav>
+        <section class="navBar">
+            <a class="navItem" href="/">Home</a>
+            <a class="curNavItem" href="/form">Form</a>
+            <a class="navItem" href="/about">About</a>
+        </section>
+    </nav>
+
+    <!-- Main Content -->
+    <article>
+        <section class="formSection">
+            <h2 class="pageSubHeader">Fill in Your Info</h2>
+            <form class="formBlock" method="post" onsubmit="alert('Your form has been successfully submitted.')">
+                <p class="mainText">Your name:</p>
+                <input id="nameBox" class="inputBox" type="text" name="userName"/>
+                <p class="mainText">Your age:</p>
+                <input id="ageBox" class="inputBox" type="number" name="userAge"/>
+                <input id="submitButton" type="submit" class="formButton" value="Submit"/>
+            </form>
+        </section>
+    </article>
+
+    <!-- The Footer -->
+    <footer class="footBar">
+        <p class="footText">The MAF Site. &copy; Adam, 2018. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
