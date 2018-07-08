@@ -7,38 +7,38 @@
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/form_page.css"/>
 </head>
-<body class="noMargin picBackground">
+<body class="margin_no body_background_like-picture">
     <!-- The Header -->
     <header>
-        <h1 class="noMargin pageHeader">MAF Form</h1>
+        <h1 class="margin_no page__main-header">MAF Form</h1>
     </header>
 
     <!-- The Navigation Bar -->
     <nav>
-        <section class="navBar">
-            <a class="navItem" href="/">Home</a>
-            <a class="curNavItem" href="/form">Form</a>
-            <a class="navItem" href="/about">About</a>
+        <section class="nav-bar">
+            <a class="nav-bar__item" href="/">Home</a>
+            <a class="nav-bar__item_current" href="/form">Form</a>
+            <a class="nav-bar__item" href="/about">About</a>
         </section>
     </nav>
 
     <!-- Main Content -->
     <article>
-        <section class="formSection">
-            <h2 class="pageSubHeader">Fill in Your Info</h2>
-            <form class="formBlock" method="post" onsubmit="alert('Your form has been successfully submitted.')">
-                <p class="mainText">Your name:</p>
-                <input id="nameBox" class="inputBox" type="text" name="userName"/>
-                <p class="mainText">Your age:</p>
-                <input id="ageBox" class="inputBox" type="number" name="userAge"/>
-                <input id="submitButton" type="submit" class="formButton" value="Submit"/>
+        <section class="form-section">
+            <h2 class="block__header">Fill in Your Info</h2>
+            <form class="form" method="post" onsubmit="alert('Your form has been successfully submitted.')">
+                <p class="main-text">Your name:</p>
+                <input id="nameBox" class="input-box" type="text" name="userName"/>
+                <p class="main-text">Your age:</p>
+                <input id="ageBox" class="input-box" type="number" name="userAge"/>
+                <input id="submitButton" type="submit" class="form__button" value="Submit"/>
             </form>
         </section>
     </article>
 
     <!-- The Footer -->
-    <footer class="footBar">
-        <p class="footText">The MAF Site. &copy; Adam, 2018. All Rights Reserved.</p>
+    <footer class="foot-bar">
+        <p class="foot-bar__text">The MAF Site. &copy; Adam, 2018. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

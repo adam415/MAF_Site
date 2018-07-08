@@ -1,27 +1,27 @@
 ﻿@media screen and (max-width: 700px) {
-    .mainContent {
+    .article {
         flex-direction: column-reverse;
     }
 }
 
 /* Main Content */
-.mainContent {
+.article {
     display: flex;
 }
 
 /* Picture Column */
-.picColumn {
+.article__pic-column {
     flex: 45%;
     text-align: center;
 }
 
 /* Text Column */
-.textColumn {
+.article__text-column {
     flex: 55%;
     padding: 20px;
     text-align: center;
 }
 
-.greetingsBlock {
+.greetings-block {
     margin: 100px 0px 100px 0px;
 }

@@ -1,22 +1,22 @@
 /* Responsive Layout */
 @media screen and (max-width: 700px) {
-    .navBar {
+    .nav-bar {
         flex-direction: column;
     }
 }
 
-.picBackground {
+.body_background_like-picture {
     /* The color of the picture's background: */
     background-color: rgb(244, 240, 237);
 }
 
 /* Remove Margin */
-.noMargin {
+.margin_no {
     margin: 0;
 }
 
 /* Headers */
-.pageHeader {
+.page__main-header {
     background-color: #600000;
     text-align: center;
     color: white;
@@ -26,7 +26,7 @@
     font-size: 4em;
 }
 
-.pageSubHeader {
+.block__header {
     text-align: center;
     color: #800000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,14 +35,14 @@
 }
 
 /* Paragraphs */
-.mainText {
+.main-text {
     color: dimgray;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.4em;
 }
 
-.refText {
+.ref-text {
     color: dimgray;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,37 +50,37 @@
 }
 
 
-.inputBox {
+.input-box {
     font-size: 1.4em;
 }
 
-.formButton {
+.form__button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.2em;
-    margin: 1em 0em 1em 0em;
+    margin: 2em 0em 2em 0em;
 }
 
 /* Link Buttons */
-.linkText {
+.link-text {
     color: #A00000;
     text-decoration: none;
 }
 
-.linkText:hover {
+.link-text:hover {
     color: #FF0000;
 }
 
-.linkText:active {
+.link-text:active {
     color: #A00000;
 }
 
 /* Navigation Bar */
-.navBar {
+.nav-bar {
     display: flex;
     background-color: #252525;
 }
 
-.navItem {
+.nav-bar__item {
     color: white;
     text-align: center;
     text-decoration: none;
@@ -89,17 +89,17 @@
     font-size: 1.2em;
 }
 
-    .navItem:hover {
+    .nav-bar__item:hover {
         background-color: #DDDDDD;
         color: black;
     }
 
-    .navItem:active {
+    .nav-bar__item:active {
         background-color: #808080;
         color: black;
     }
 
-.curNavItem {
+.nav-bar__item_current {
     background-color: #A00000;
     color: white;
     text-align: center;
@@ -109,24 +109,24 @@
     font-size: 1.2em;
 }
 
-    .curNavItem:hover {
+    .nav-bar__item_current:hover {
         background-color: #DDDDDD;
         color: #A00000;
     }
 
-    .curNavItem:active {
+    .nav-bar__item_current:active {
         background-color: #808080;
         color: black;
     }
 
 /* Footer */
-.footBar {
+.foot-bar {
     background-color: dimgray;
     text-align: center;
     padding: 10px;
 }
 
-.footText {
+.foot-bar__text {
     color: white;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
