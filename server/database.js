@@ -1,5 +1,5 @@
 const mongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/';
+const url = '';
 
 function addUser(userName, userAge) {
     var user = { name: userName, age: userAge };
@@ -34,5 +34,8 @@ function logUsers() {
     });
 }
 
-module.exports.addUser = addUser;
-module.exports.logUsers = logUsers;
+module.exports = {
+    addUser: addUser,
+    logUsers: logUsers,
+    dbUrl: url
+};
