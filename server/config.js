@@ -1,4 +1,4 @@
 module.exports = {
     port: 3000,
-    dbUrl: 'mongodb://localhost:27017/MAF-Data'
+    dbUrl: 'mongodb://localhost:27017/mafdb'
 };

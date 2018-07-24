@@ -1,41 +1,70 @@
-const mongoClient = require('mongodb').MongoClient;
-const url = '';
+const mongoose = require('mongoose');
 
-function addUser(userName, userAge) {
-    var user = { name: userName, age: userAge };
+const dbUrl = require('./config').dbUrl;
+const User = require('./models/User');
 
-    mongoClient.connect(url, { useNewUrlParser: true }, function (err, client) {
-        if (err) return console.log(err);
+mongoose.Promise = global.Promise;
 
-        const db = client.db('usersdb');
-        const collection = db.collection('users');
-        
-        collection.insertOne(user, function (err, results) {
-            if (err) return console.log(err);
-            else console.log(`Added new user to db: ${results}`);
-        });
+var connected = false;
 
-        client.close();
+function connect() {
+    if (connected) return;
+
+    mongoose.connect(dbUrl, { useNewUrlParser: true }, err => {
+        if (err) {
+            connected = false;
+            console.error(`Couldn't connect to db "${dbUrl}":\n${err}`);
+            return handleError(err);
+        }
+        else {
+            connected = true;
+            console.log(`Connected to db "${dbUrl}"`);
+        }
     });
 }
 
-function logUsers() {
-    mongoClient.connect(url, { useNewUrlParser: true }, function (err, client) {
-        if (err) return console.log(err);
+function saveUser(name, age) {
+    if (!connected) {
+        console.error("Cannot save user data because database is not connected");
+    }
 
-        const db = client.db('usersdb');
-        const collection = db.collection('users');
-        
-        collection.find().toArray(function (err, results) {
-            console.log(users);
-        });
+    const user = new User({
+        name: name,
+        age: age
+    });
 
-        client.close();
+    user.save(err => {
+        if (err) {
+            console.error(`Couldn't save user data:\n${err}`);
+            return handleError(err);
+        }
+        else {
+            // console.log("User data have been successfully saved to db");
+        }
+    });
+}
+
+function queryUsers(response) {
+    if (!connected) {
+        console.error("Cannot get user data because database is not connected");
+        response.send([]);
+    }
+
+    User.find((err, docs) => {
+        if (err) {
+            console.error(`Couldn't get user data: ${err}`);
+            response.send([]);
+            return handleError(err);
+        }
+        else {
+            // console.log("User data have been successfully obtained");
+            response.send(docs);
+        }
     });
 }
 
 module.exports = {
-    addUser: addUser,
-    logUsers: logUsers,
-    dbUrl: url
+    connect: connect,
+    saveUser: saveUser,
+    queryUsers: queryUsers,
 };
