@@ -65,6 +65,7 @@
 .link-text {
     color: #A00000;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .link-text:hover {

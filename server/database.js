@@ -63,8 +63,30 @@ function queryUsers(response) {
     });
 }
 
+function deleteUser(id) {
+    if (!connected) {
+        console.error("Cannot delete user data because database is not connected");
+        return false;
+    }
+
+    let done = false, result;
+    User.deleteOne({ _id: id }, (err) => {
+        if (err) {
+            console.error("Couldn't delete user data: ", err);
+            result = false;
+        }
+        else result = true;
+
+        done = true;
+    });
+
+    while (!done) ; // wait for removal finishing
+    return result;
+}
+
 module.exports = {
     connect: connect,
     saveUser: saveUser,
     queryUsers: queryUsers,
+    deleteUser: deleteUser
 };
